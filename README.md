@@ -15,7 +15,7 @@ Based on the [official Vercel Supabase Starter](https://github.com/vercel/next.j
 ### 1. Clone and install
 
 ```bash
-git clone <this-repo-url> my-project
+git clone https://github.com/TanookiLabs/hackathon-starter.git my-project
 cd my-project
 npm install
 ```
@@ -41,14 +41,29 @@ npm run dev
 
 Open [localhost:3000](http://localhost:3000) in your browser.
 
-### 5. Deploy to Vercel
+### 5. Install the Vercel CLI
+
+```bash
+npm i -g vercel
+```
+
+If you're using Claude Code, also install the Vercel MCP plugin so Claude can deploy for you:
+
+```bash
+claude mcp add vercel -- npx -y vercel-mcp@latest
+```
+
+### 6. Deploy to Vercel
 
 ```bash
 # Option A: Tell Claude Code
 claude
 > "Deploy this to Vercel"
 
-# Option B: Use the Vercel dashboard
+# Option B: Use the Vercel CLI directly
+vercel
+
+# Option C: Use the Vercel dashboard
 # Go to vercel.com/new → Import your GitHub repo → Deploy
 ```
 
